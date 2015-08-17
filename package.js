@@ -1,7 +1,8 @@
 Package.describe({
   summary: "Immutable Data Collections for Javascript.",
-  git: "https://github.com/kraf/meteor-immutable.git"
   version: "3.7.4",
+  git: "https://github.com/dataflows/meteor-immutable.git",
+  name: "dataflows:immutable"
 });
 
 Npm.depends({
