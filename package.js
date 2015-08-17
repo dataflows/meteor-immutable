@@ -1,11 +1,11 @@
 Package.describe({
   summary: "Immutable Data Collections for Javascript.",
-  version: "2.0.17",
   git: "https://github.com/kraf/meteor-immutable.git"
+  version: "3.7.4",
 });
 
 Npm.depends({
-	"immutable": "2.0.16"
+	"immutable": "3.7.4"
 });
 
 Package.onUse(function(api) {
