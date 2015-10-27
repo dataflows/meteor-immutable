@@ -10,8 +10,21 @@ Npm.depends({
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom("METEOR@0.9.0.1");
-  api.addFiles("vendor/immutable.js", "client");
-  api.addFiles("lib/require-immutable.js", "server");
-  api.export("Immutable", ["server", "client"]);
+  var both = ['server', 'client'];
+  
+  api.versionsFrom("METEOR@1.2.0.2");
+  
+  api.use([
+    'cosmos:browserify'
+  ], 'client');
+
+  api.addFiles([
+    'client.browserify.js'
+  ], 'client');
+  
+  api.addFiles([
+    'namespace.js'
+  ], both);
+  
+  api.export("Immutable", both);
 });
